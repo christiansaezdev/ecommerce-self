@@ -1,5 +1,22 @@
-export default function HomePage(){
+import Products from "./componentes/Products";
+
+HomePage.defaultProps = {
+    products: Array(3).fill(''),
+  };
+  
+
+export default function HomePage({products}){
     return(
-        <h1>HIII</h1>
+        <div>
+            
+        
+        <h1>SELF 💚</h1>
+        <div className="cntProduct">
+      {products.map((prd) => {
+        return <Products/>;
+      })}
+
+      </div>
+      </div>
     )
 }

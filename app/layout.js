@@ -17,14 +17,6 @@ export default function RootLayout({ children,products }) {
       <body className={font.className}>
       <Navigation/>
       {children}
-      <div className="cntProduct">
-           
-      {products.map((prd) => {
-        return <Products/>;
-      })}
-
-      </div>
-      
       </body>
     </html>
   );

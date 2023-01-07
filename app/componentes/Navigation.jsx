@@ -20,12 +20,17 @@ const links = [
   {
     label: "Proteinas",
     route: "/prote",
+  },
+  {
+    label: "Login",
+    route: "/login",
   }
 ];
 
 export function Navigation(){
     return (
         <header className="p-5 bg-blue-500">
+        
           <nav>
             <ul className={styles.navigation}>
               {links.map(({ label, route }) => (

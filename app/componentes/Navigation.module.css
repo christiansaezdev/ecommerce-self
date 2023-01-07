@@ -5,10 +5,11 @@
 .navigation{
     display: flex;
     list-style: none;
-    gap:32px;
+    gap:50px;
+    justify-content: center;
 
 }
 .navigation a{
     color: #4c4d52d8;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }

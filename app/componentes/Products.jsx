@@ -1,4 +1,5 @@
 
+import BtnAdd from './BtnAdd'
 import styles from './Products.module.css'
 export default function Products(){
     return (
@@ -15,6 +16,7 @@ export default function Products(){
                         <p >Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
                         <span className="button is-link modal-button" data-target="modal-image2">Image modal</span>
                     </div>
+                    <BtnAdd/>
                 </div>
     </div>
 

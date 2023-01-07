@@ -2,27 +2,27 @@ import Link from "next/link";
 import styles from './Navigation.module.css'
 const links = [
   {
-    label: "Frutas",
+    label: "Frutas 🌛",
     route: "/",
   },
   {
-    label: "Verduras",
+    label: "Verduras 🥗",
     route: "/about",
   },
   {
-    label: "Queso",
+    label: "Queso 🧀",
     route: "/queso",
   },
   {
-    label: "Frutos Secos",
+    label: "Frutos Secos 🥜",
     route: "/frutos",
   },
   {
-    label: "Proteinas",
+    label: "Proteinas 🏋️",
     route: "/prote",
   },
   {
-    label: "Login",
+    label: "Login 🙎",
     route: "/login",
   }
 ];
@@ -30,8 +30,7 @@ const links = [
 export function Navigation(){
     return (
         <header className="p-5 bg-blue-500">
-        
-          <nav>
+          <nav style={{border:'1px solid #f7f7f7', display:'block', fontSize:18}}>
             <ul className={styles.navigation}>
               {links.map(({ label, route }) => (
                 <li key={route}>

@@ -1,0 +1,14 @@
+.header{
+    border:1px solid #6dd47a;
+
+}
+.navigation{
+    display: flex;
+    list-style: none;
+    gap:32px;
+
+}
+.navigation a{
+    color: #4c4d52d8;
+    text-decoration: underline;
+}

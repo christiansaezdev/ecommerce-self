@@ -1,0 +1,17 @@
+.btnLogin
+{
+    padding:0.3rem 1rem ;
+    font-size: 0.8rem;
+    border-radius: 13%;
+    border: 0ch;
+    color: #fff;
+}
+.btnReg{
+    background: #40a6dd;
+}
+.btnEntrar{
+    background: #1dd771;
+}
+.btnLogin:hover{
+    cursor: pointer;
+}

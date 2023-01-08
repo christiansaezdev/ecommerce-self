@@ -15,6 +15,13 @@ body {
   max-width: auto;
   margin: 0 auto
 }
+.headerNav{
+  display: flex;
+  justify-content: space-around;
+}
+.navElement{
+  margin-top: 10px;
+}
 .ContainerButtonAdd
 {
   background-color: #4CAF50; /* Green */

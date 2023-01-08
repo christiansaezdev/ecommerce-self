@@ -8,12 +8,12 @@ HomePage.defaultProps = {
 export default function HomePage({products}){
     return(
         <div>
-            
-        
-        <h1>SELF 💚</h1>
-        <div className="cntProduct">
+        <div  className="cntProduct">
       {products.map((prd) => {
-        return <Products/>;
+        return (
+        <div>
+        <Products key={prd.id}/>;
+        </div> )
       })}
 
       </div>

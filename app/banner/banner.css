@@ -1,0 +1,11 @@
+.imgBanner{
+    object-fit:cover ;
+    width: 90%;
+    height: 90%;
+    margin-top: 2%;
+}
+.banner_centered{
+    display: flex;
+    justify-content: center;
+
+}

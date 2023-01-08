@@ -13,11 +13,13 @@ export default async function Post({params}){
     return(
         <ul style={{background:'#444', fontSize:'10px'}}>
            {comments.map(comment =>(
+            <div>
             <li key={comment.id}>
             <Image width={50} height={50} src={`https://avatars.dicebear.com/api/pixel-art-neutral/${comment.email}.svg`} alt={comment.name}/>
             <h4>{comment.name}</h4>
             <small>{comment.body}</small>
             </li>
+            </div>
     ))}
         </ul>
     )

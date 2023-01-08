@@ -11,12 +11,21 @@ export default function Products(){
                 </div>
                 <div className="card-content">
                     <div className="content">
-                        <h2>Producto Desc</h2>
-                        <h4>Price: $2500</h4>
-                        <p >Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                        <span className="button is-link modal-button" data-target="modal-image2">Image modal</span>
+                    <h2>Producto Desc</h2>
+                    <div style={{display:'flex', justifyContent:'space-between',marginRight:40}}>
+                    <h4 style={{margin:'5px 25px 0px 0px'}}>Price: $2500</h4>
+                    <div style={{width:'25%', background:'#999',alignItems:'center',justifyContent:'center', borderRadius:'30%'}}>
+                    <h4 style={{padding:'15% 0% 15% 20%'}}>KG</h4>    
                     </div>
+                    </div>
+                        <div style={{marginTop:20}}>
+                        <p >Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. </p>
+                        <span className="button is-link modal-button" data-target="modal-image2">Image modal</span>    
+                        </div>
+                    </div>
+                    <div style={{display:'inline-flex'}}>
                     <BtnAdd/>
+                    </div>
                 </div>
     </div>
 

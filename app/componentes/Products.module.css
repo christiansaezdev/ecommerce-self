@@ -6,8 +6,8 @@
 .container{
     margin:0;
     padding-left: 10%;
-    width: 500px;
-    height: 500px;
+    width: 380px;
+    height: 400px;
     flex-direction: row;justify-content: flex-end
 }
 .container img{

@@ -2,8 +2,8 @@ export default function BtnAdd() {
     const liked = false;
     
     return (
-        <div className="ContainerButtonAdd">
-        <button >
+        <div >
+        <button className="ContainerButtonAdd">
         Agregar
         </button>
         </div>

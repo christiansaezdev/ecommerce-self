@@ -1,69 +1,27 @@
-import dynamic from "next/dynamic";
-
-const columns = [
-    {
-      label: "ID",
-      dataField: "id",
-      width: 200,
-    },
-    {
-      label: "Name",
-      dataField: "name",
-    },
-  ],
-  sorting = {
-    enabled: true,
-  },
-  filtering = {
-    enabled: true,
-  },
-  selection = {
-    enabled: true,
-    checkBoxes: {
-      enabled: true,
-    },
-  },
-  dataSource = [
-    { id: 1, name: "Hydrogen" },
-    { id: 2, name: "Helium" },
-    { id: 3, name: "Lithium" },
-    { id: 4, name: "Beryllium" },
-    { id: 5, name: "Boron" },
-    { id: 6, name: "Carbon" },
-    { id: 7, name: "Nitrogen" },
-    { id: 8, name: "Oxygen" },
-    { id: 9, name: "Fluorine" },
-    { id: 10, name: "Neon" },
-    { id: 11, name: "Sodium" },
-    { id: 12, name: "Magnesium" },
-    { id: 13, name: "Aluminum" },
-    { id: 14, name: "Silicon" },
-    { id: 15, name: "Phosphorus" },
-    { id: 16, name: "Sulfur" },
-    { id: 17, name: "Chlorine" },
-    { id: 18, name: "Argon" },
-    { id: 19, name: "Potassium" },
-    { id: 20, name: "Calcium" },
-  ],
-  dataSourceSettings = {
-    dataFields: [
-      { name: "id", dataType: "number" },
-      { name: "name", dataType: "string" },
-    ],
-  };
-
+"use client";
+import { AgGridReact } from "ag-grid-react";
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 export default function AdminPage() {
+  const data = [
+    { name: "dan", age: 28 },
+    { name: "max", age: 26 },
+    { name: "lucho", age: 22 },
+    { name: "juan", age: 21 },
+    { name: "pepe", age: 23 },
+  ];
+  const columns =[
+    {
+        headerName:"name", field:'name',
+    },
+    {
+        headerName:"age", field:'age',
+    }
+  ]
   return (
-    <div>
-      <Grid
-        id="grid"
-        sorting={sorting}
-        filtering={filtering}
-        columns={columns}
-        selection={selection}
-        dataSource={dataSource}
-        dataSourceSettings={dataSourceSettings}
-      ></Grid>
+    <div className="ag-theme-alpine"
+    style={{ height: '600px' }}>
+      <AgGridReact rowData={data} columnDefs={columns}  style={{ height: '50%', width: '50%' }} />
     </div>
   );
 }

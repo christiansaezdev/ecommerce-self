@@ -1,8 +1,8 @@
-import style from './banner.css';
+import styles from './banner.css';
 
 export default function BannerPage({bannerProps}) {
   return (
-      <div flex
+      <div
         className="banner_centered flex justify-center content-center flex-col items-center "
         style={{
           backgroundColor: bannerProps.backgroundColor || "#fff",
@@ -10,11 +10,8 @@ export default function BannerPage({bannerProps}) {
           maxHeight: bannerProps.maxHeight || "550px",
           width: bannerProps.width || "80%",
           maxWidth: bannerProps.maxWidth || "100px",
-          headline:bannerProps.headline || '',
         }}
       >
-     
-       
         <a
           href={bannerProps.buttonLink}
         >

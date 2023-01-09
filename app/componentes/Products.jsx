@@ -3,7 +3,7 @@ import BtnAdd from './BtnAdd'
 import styles from './Products.module.css'
 export default function Products(){
     return (
-        <div flex className={styles.container}>
+        <div className={styles.container}>
                 <div className="card">
                 <div className={styles.cell}>
                     <img src="https://s3.amazonaws.com/assets.lavegadelivery.cl/web-dist/fotos/productos/69/jpg/pomelo_1_kg_9557_300x300.jpg" alt="Placeholder image"/>

@@ -6,7 +6,7 @@ export default function LoginPage() {
   //if(session){
 
   return (
-    <div flex>
+    <div>
     <h2>Bienvenido a SELF💚</h2>
     <form action="/login" method="post">
     <label for="first">Correo:</label>

@@ -2,27 +2,15 @@ import '../styles/globals.css'
 
 import { Navigation } from "./componentes/Navigation";
 import Products from './componentes/Products';
-import BannerPage from './banner/page';
+import BannerPage from '../app/componentes/Banner';
 import { font } from './font';
 
-RootLayout.defaultProps = {
+ RootLayout.defaultProps = {
   products: Array(3).fill(''),
 };
 
 
-//Esto se alimenta de un servicio, y es necesario reutilizar el componente BannerPage (quedara en una function)
-const bannerProps = {
-  backgroundColor:'#D8F3DC',
-  height:'25rem',
-  width:'100%',
-  maxHeight: '100%',
-  maxWidth:'100%',
-  buttonBackgroundColor:'#000',
-  buttonText:'hihihi',
-  //  headline:'Titulo del banner', opcional
-  imgBanner:'https://s3.amazonaws.com/assets.lavegadelivery.cl/web-dist/fotos/banners/474/jpg/ano_nuevo_despacho_gratis_5847_1900x640.jpg'
 
-};
 
 const cant = null; // es la cantidad de elementos del carrito
 
@@ -41,11 +29,9 @@ export default function RootLayout({ children }) {
       </div>
       <Navigation/>
       <div>
-      <BannerPage bannerProps={bannerProps}></BannerPage>
-      </div>
       {children}
+      </div>
       </body>
     </html>
   );
- 
 }

@@ -1,4 +1,4 @@
-import styles from './banner.css';
+import styles from './banner.css'
 
 export default function BannerPage({bannerProps}) {
   return (

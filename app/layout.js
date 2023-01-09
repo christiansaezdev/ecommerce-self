@@ -13,6 +13,9 @@ import { font } from './font';
 
 
 const cant = null; // es la cantidad de elementos del carrito
+const isAdmin = true;
+const isLoged = true;
+const session = {username:'Christian'};
 
 export default function RootLayout({ children }) {
   return (
@@ -24,8 +27,9 @@ export default function RootLayout({ children }) {
       <div className='headerNav'>
       <h1>SELF 💚</h1>  
       <h4 className='navElement'>Slogan... somos una compañia verde xd 🍏</h4>
-      <a className='navElement' href="/login">Iniciar Sesion 💻</a>
-      <a className='navElement' href="/login">Carrito 🥕 x {cant || 4}</a>
+     {isLoged ? <p className='navElement'> Bienvenido {session.username}</p> :  <a className='navElement' href="/login">Iniciar Sesion 💻</a>}
+      {isAdmin ?  <a className='navElement' href="/adminPage">Administrar 💻</a> : ''}
+      {!isAdmin ? <a className='navElement' href="/login">Carrito 🥕 x {cant || 4}</a> : ''}
       </div>
       <Navigation/>
       <div>

@@ -2,7 +2,7 @@ import BannerPage from "./componentes/Banner";
 import Products from "./componentes/Products";
 
 HomePage.defaultProps = {
-    products: Array(3).fill(''),
+    products: Array(7).fill(''),
   };
   
 
@@ -27,7 +27,7 @@ export default function HomePage({products}){
       {products.map((prd) => {
         return (
         <div>
-        <Products key={prd.id}/>;
+        <Products key={prd.id}/>
         </div> )
       })}
 

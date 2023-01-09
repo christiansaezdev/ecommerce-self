@@ -1,10 +1,6 @@
 import BannerPage from '../componentes/Banner';
 import BannerImplement from '../componentes/Banner';
 import Products from '../product/page'
-productPage.defaultProps = {
-    products: Array(3).fill(''),
-  };
-  
 //Esto se alimenta de un servicio, y es necesario reutilizar el componente BannerPage (quedara en una function)
 
 

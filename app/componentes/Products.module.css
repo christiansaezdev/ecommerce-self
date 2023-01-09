@@ -5,9 +5,9 @@
 }
 .container{
     margin:0;
-    padding-left: 10%;
-    width: 380px;
-    height: 400px;
+    padding: 10%;
+    width: 280px;
+    height: 450px;
     flex-direction: row;justify-content: flex-end
 }
 .container img{

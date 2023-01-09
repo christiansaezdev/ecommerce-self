@@ -26,6 +26,7 @@ export default function Products(){
                     <div style={{display:'inline-flex'}}>
                     <BtnAdd/>
                     </div>
+                    
                 </div>
     </div>
 

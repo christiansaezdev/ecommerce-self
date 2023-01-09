@@ -4,13 +4,7 @@ import { Navigation } from "./componentes/Navigation";
 import Products from './componentes/Products';
 import BannerPage from '../app/componentes/Banner';
 import { font } from './font';
-
- RootLayout.defaultProps = {
-  products: Array(3).fill(''),
-};
-
-
-
+import FooterComponents from './componentes/Footer';
 
 const cant = null; // es la cantidad de elementos del carrito
 const isAdmin = true;
@@ -34,6 +28,7 @@ export default function RootLayout({ children }) {
       <Navigation/>
       <div>
       {children}
+      <FooterComponents></FooterComponents>
       </div>
       </body>
     </html>

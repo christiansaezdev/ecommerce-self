@@ -13,7 +13,6 @@ export default function FooterComponents(){
            <p></p>
            <p>Contacto@self.cl</p>
            <p>Todos los derechos reservados</p>
-           <link rel="contacto" type="link" href="/contacto">Contacto</link>
 
         </div>
 

@@ -2,7 +2,7 @@ import BannerPage from "./componentes/Banner";
 import Products from "./componentes/Products";
 
 HomePage.defaultProps = {
-    products: Array(7).fill(''),
+    products: Array(20).fill(''),
   };
   
 

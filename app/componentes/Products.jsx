@@ -1,21 +1,30 @@
 
 import BtnAdd from './BtnAdd'
 import styles from './Products.module.css'
-export default function Products(){
+
+const producto = {
+    titulo:'Naranjas',
+    precio:'$3.500',
+    tipoVenta:'UN.',
+    imgUrl:'https://s3.amazonaws.com/assets.lavegadelivery.cl/web-dist/fotos/productos/256/jpg/sandia_unidad_9622_300x300.jpg'
+
+}
+
+export default function Products(product){
     return (
         <div className={styles.container}>
                 <div className="card">
                 <div className={styles.cell}>
-                    <img src="https://s3.amazonaws.com/assets.lavegadelivery.cl/web-dist/fotos/productos/69/jpg/pomelo_1_kg_9557_300x300.jpg" alt="Placeholder image"/>
+                    <img src={producto.imgUrl} alt="Placeholder image"/>
                 </div>
                 </div>
                 <div className="card-content">
                     <div className="content">
-                    <h2>Producto Desc</h2>
+                    <h2>{producto.titulo}</h2>
                     <div style={{display:'flex', justifyContent:'space-between',marginRight:40}}>
-                    <h4 style={{margin:'5px 25px 0px 0px'}}>Price: $2500</h4>
+                    <h4 style={{margin:'5px 25px 0px 0px'}}>{producto.precio}</h4>
                     <div style={{width:'25%', background:'#999',alignItems:'center',justifyContent:'center', borderRadius:'30%'}}>
-                    <h4 style={{padding:'15% 0% 15% 20%'}}>KG</h4>    
+                    <h4 style={{padding:'15% 0% 15% 20%'}}>{producto.tipoVenta}</h4>    
                     </div>
                     </div>
                         <div style={{marginTop:20}}>

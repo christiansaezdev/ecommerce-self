@@ -31,8 +31,9 @@ const links = [
 
 
 
+
 export function Navigation(){
-  const [cant, setCant] = useState(0);
+  const [cant, setCant] = useState(10);
 const [isAdmin, setIsAdmin] = useState(false);
 const [isLoged, setIsLoged] = useState(true);
 const [session, setSession] = useState(isLoged ? {username:'Christian'} : 0);

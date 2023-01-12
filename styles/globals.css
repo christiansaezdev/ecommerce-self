@@ -25,14 +25,19 @@ body {
 .ContainerButtonAdd
 {
   background-color: #4CAF50; /* Green */
-  border: none;
+  border: 0px;
   color: white;
+  margin-top: 25px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   font-size: 16px;
-  border-radius: 55%;
+  width: 13rem;
+  position: absolute;
+  border-radius: 7px;
+  cursor: pointer;
+  gap: 20px;
 }
 body {
   color: #777;

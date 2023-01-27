@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head>
-        <title> SELF Productos Saludables 💚 </title>
+        <title> ALI-MIND Productos Saludables 💚 </title>
       </head>
       <body className={font.className}> 
       <Navigation/>

@@ -40,7 +40,7 @@ const [session, setSession] = useState(isLoged ? {username:'Christian'} : 0);
     return (
         <header className="p-5 bg-blue-500">
         <div className='headerNav'>
-      <h1>SELF 💚</h1>  
+      <h1>ALI-MIND 💚</h1>  
       <h4 className='navElement'>Slogan... somos una compañia verde xd 🍏</h4>
      {isLoged ? <p className='navElement'> Bienvenido {session.username}</p> :  <a className='navElement' href="/login">Iniciar Sesion 💻</a>}
       {isAdmin ?  <a className='navElement' href="/adminPage">Administrar 💻</a> : ''}

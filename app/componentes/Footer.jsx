@@ -8,10 +8,10 @@ export default function FooterComponents(){
         <div className={styles.contenedor}>
         
         <div>
-        <p>Self 2023</p>
+        <p>ALI-MIND 2023</p>
            <p>Algun lugar #123, Providencia 🌏{ubicacion}</p>
            <p></p>
-           <p>Contacto@self.cl</p>
+           <p>Contacto@ali-mind.cl</p>
            <p>Todos los derechos reservados</p>
 
         </div>

@@ -11,6 +11,7 @@
 }
 .btnEntrar{
     background: #1dd771;
+    margin-left: 2rem;
 }
 .btnLogin:hover{
     cursor: pointer;

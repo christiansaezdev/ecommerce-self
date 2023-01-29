@@ -1,10 +1,35 @@
-.footer{
-    background-color: rgba(87, 90, 89, 0.747);
-    padding: 5rem 0;
-    margin-top: 5rem;
-    color: aliceblue;
-}
 .contenedor{
    
     display: flex;
 }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .a {
+    color: #fff;
+  }

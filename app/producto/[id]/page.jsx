@@ -30,7 +30,11 @@ export default function ProductoNamePage(second) {
           <div className={styless.desc} >
           <h5>Ea nisi nisi laborum exercitation commodo quis Lorem irure sunt eiusmod do amet.Laboris elit esse duis eu elit eiusmod tempor labore incididunt exercitation laboris sint consectetur cupidatat. Nisi mollit deserunt dolore nisi anim incididunt dolore ea consectetur fugiat proident mollit fugiat. Eu ea deserunt esse reprehenderit ea tempor tempor reprehenderit exercitation aliquip.</h5>
           </div>
-          <BtnAdd/>
+          {producto.producto.stock > 0 ? 
+          (<BtnAdd/>):
+          (<h2>Sin Stock</h2>)
+        }
+          
       </div>
     </div>
   );

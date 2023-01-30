@@ -37,23 +37,24 @@ export default function HomePage() {
   const getProductData = async () => {
     try {
       const res = await axios.get("http://localhost:3005/api/v1/products");
-      setProductresp(res.data);
+      setProduct(res.data);
     } catch (error) {
       console.error(error);
     }
   };
-  const [product, setProductresp] = useState([]);
+  const [product, setProduct] = useState([]);
   useEffect(() => {
     getProductData();
   }, []);
 
   return (
-    <div class="box">
+    <div className="box">
       <BannerPage bannerProps={bannerProps}></BannerPage>
       <div className="cntProduct">
         {product.map((prd) => {
+          console.log(prd)
           return (
-            <div>
+            <div key={prd.id}>
               <Products producto={prd} key={prd.id} />
             </div>
           );

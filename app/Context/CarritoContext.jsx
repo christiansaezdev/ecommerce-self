@@ -7,7 +7,7 @@ const CarritoContext = createContext();
 export function CarritoProvider({ children }) {
     const [productos, setProductos] = useState([]);
     const agregarProducto = (producto) => {
-      console.log(0);
+      console.log('siiiii');
     };
     const eliminarProducto = id => {
       setProductos(productos.filter(producto => producto.id !== id));

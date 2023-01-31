@@ -1,14 +1,14 @@
 "use client";
 import ShoppingCart from "@material-ui/icons/ShoppingCart";
 import { useContext } from "react";
-import {useCarritoContext} from "../Context/CarritoContext";
+import CartContext from "../Context/CartProdContext";
 import botonStyle from "./BtnAdd.module.css";
 
 export default function BtnAdd(producto) {
 
-  const context = useContext(useCarritoContext);
+  const { addItemToCart, products } = useContext(CartContext);
 
-  console.log("aaa",context)
+  console.log("aaa",CartContext)
 
   const carritoProducto = {
     id: producto.producto.id,
@@ -22,7 +22,7 @@ export default function BtnAdd(producto) {
     <div className={botonStyle.container}>
     
       <button
-        onClick={() =>  context.agregarProducto(carritoProducto)}
+        onClick={() =>  addItemToCart(carritoProducto)}
         className="ContainerButtonAdd"
       >
         Agregar

@@ -1,38 +1,68 @@
-import React, { useContext, createContext } from 'react';
+"use client"
+import { useState, useContext, createContext } from "react";
 
 //Context
-export const AppContext = createContext(null);
+export const CartContext = createContext(null);
 
 //Provider
-export const AppContextProvider = ({ children }) => {
-  const [variableState, setVariableState] = React.useState(false);
+export const CartProvider = ({ children }) => {
+  const [cartItem, setCartItem] = useState(() => {
+    try {
+      const productEnLocalStorage = JSON.parse(
+        localStorage.getItem("cartProduct")
+      );
+      return productEnLocalStorage ? JSON.parse(productEnLocalStorage) : [];
+    } catch (err) {
+      return [];
+    }
+  });
 
-  //ComponentDidMouunt
-  React.useEffect(() => {
+  useEffect(() => {
+    localStorage.setItem("cartProduct", JSON.stringify(cartItem));
+  }, [cartItem]);
 
-  }, []);
+  const addItemToCart = (product) => {
+    const inCart = cartItem.find(
+      (productInCart) => productInCart.id === product.id
+    );
+    if (inCart) {
+      setCartItem.map((productInCart) => {
+        if (productInCart.id === product.id) {
+          return { ...inCart, amount: inCart.amount + 1 };
+        } else {
+          return productInCart;
+        }
+      });
+    } else {
+      setCartItem([...cartItem, { ...product, amount: 1 }]);
+    }
 
-  //
-  const values = React.useMemo(() => (
-    { variableState,      // States que seran visibles en el contexto.
-      setVariableState,   // Funciones que son exportadas para manejo externo.
-    }), 
-    [ 
-      variableState ]);   // States que serán visibles en el contexto.
-
-  // Interface donde será expuesto como proveedor y envolverá la App.
-  return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
-}
-
-//
-export function useAppContext() {
-  const context = useContext(AppContext);
-
-  if(!context){
-    console.error('Error deploying App Context!!!');
-  }
-
-  return context;
-}
-
-export default useAppContext;
+    const deleteItemToCart = (product) => {
+      const inCart = cartItem.find(
+        (productInCart) => productInCart.id === product.id
+      );
+      if (inCart.amount === 1) {
+        setCartItem(
+          cartItem.filter((productInCart) => productInCart.id !== product.id)
+        );
+      } else {
+        setCartItem((productInCart) => {
+          if (productInCart.id === product.id) {
+            return { ...inCart, amount: inCart.amount - 1 };
+          } else return productInCart;
+        });
+      }
+    };
+    return (
+      <CartContext.Provider
+        value={{
+          cartItem,
+          addItemToCart,
+          deleteItemToCart,
+        }}
+      >
+        {children}
+       /</CartContext.Provider> 
+    )
+  };
+};

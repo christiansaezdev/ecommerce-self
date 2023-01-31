@@ -52,7 +52,6 @@ export default function HomePage() {
       <BannerPage bannerProps={bannerProps}></BannerPage>
       <div className="cntProduct">
         {product.map((prd) => {
-          console.log(prd)
           return (
             <div key={prd.id}>
               <Products producto={prd} key={prd.id} />

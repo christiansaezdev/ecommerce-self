@@ -1,23 +1,33 @@
+"use client";
+import ShoppingCart from "@material-ui/icons/ShoppingCart";
+import { useContext } from "react";
+import {useCarritoContext} from "../Context/CarritoContext";
+import botonStyle from "./BtnAdd.module.css";
 
-"use client"
-import ShoppingCart from '@material-ui/icons/ShoppingCart'
-import botonStyle from './BtnAdd.module.css'
+export default function BtnAdd(producto) {
 
+  const context = useContext(useCarritoContext);
 
-const product = {
-    id:1,
-    nombre:"sandia"
-}
+  console.log("aaa",context)
 
-
-export default function BtnAdd() {
-    const liked = false;
-    return (
-        <div className={botonStyle.container} >
-        <button onClick={() => console.log('first')}  className="ContainerButtonAdd">
+  const carritoProducto = {
+    id: producto.producto.id,
+    precio: producto.producto.precio,
+    precio_oferta:producto.producto.precio_oferta,
+    stock: producto.producto.stock,
+    imagenurl:producto.producto.imagenurl,
+    cantidad: 0,
+  };
+  return (
+    <div className={botonStyle.container}>
+    
+      <button
+        onClick={() =>  context.agregarProducto(carritoProducto)}
+        className="ContainerButtonAdd"
+      >
         Agregar
-        <ShoppingCart fontSize='small' width="20px" />
-        </button>
-        </div>
-    )
+        <ShoppingCart fontSize="small" width="20px" />
+      </button>
+    </div>
+  );
 }

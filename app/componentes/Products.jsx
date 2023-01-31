@@ -5,7 +5,10 @@ import styles from "./Products.module.css";
 
 
 
+
+
 export default function Products(producto) {
+    
     function formatNumber(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       }
@@ -63,7 +66,7 @@ export default function Products(producto) {
         </div>
         <div>
         {producto.producto.stock > 0 ? 
-            (<BtnAdd/>):
+            (<BtnAdd producto={producto.producto}/>):
             (<h2>Sin Stock</h2>)
           }
         </div>

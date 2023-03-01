@@ -8,6 +8,7 @@ const producto = {
   tipoVenta: "UN.",
   imgUrl:
     "https://s3.amazonaws.com/assets.lavegadelivery.cl/web-dist/fotos/productos/256/jpg/sandia_unidad_9622_300x300.jpg",
+    stock:2
 };
 export default function ProductoNamePage(second) {
   return (
@@ -30,7 +31,7 @@ export default function ProductoNamePage(second) {
           <div className={styless.desc} >
           <h5>Ea nisi nisi laborum exercitation commodo quis Lorem irure sunt eiusmod do amet.Laboris elit esse duis eu elit eiusmod tempor labore incididunt exercitation laboris sint consectetur cupidatat. Nisi mollit deserunt dolore nisi anim incididunt dolore ea consectetur fugiat proident mollit fugiat. Eu ea deserunt esse reprehenderit ea tempor tempor reprehenderit exercitation aliquip.</h5>
           </div>
-          {producto.producto.stock > 0 ? 
+          {producto.stock > 0 ? 
           (<BtnAdd/>):
           (<h2>Sin Stock</h2>)
         }

@@ -4,18 +4,17 @@ import { useContext } from "react";
 import CartContext from "../Context/CartProdContext";
 import botonStyle from "./BtnAdd.module.css";
 
-export default function BtnAdd(producto) {
+export default function BtnAdd({producto}) {
 
   const { addItemToCart, products } = useContext(CartContext);
 
-  console.log("aaa",CartContext)
-
+console.log(producto);
   const carritoProducto = {
-    id: producto.producto.id,
-    precio: producto.producto.precio,
-    precio_oferta:producto.producto.precio_oferta,
-    stock: producto.producto.stock,
-    imagenurl:producto.producto.imagenurl,
+    id: producto.id,
+    precio: producto.precio,
+    precio_oferta:producto.precio_oferta,
+    stock: producto.stock,
+    imagenurl:producto.imagenurl,
     cantidad: 0,
   };
   return (
